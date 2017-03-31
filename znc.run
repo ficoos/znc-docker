@@ -1,0 +1,6 @@
+#!/bin/sh
+PORT=36667
+IMAGE=znc:latest
+ZNC_DATA=/home/pi/.znc
+docker rm --force znc
+docker run -d -p $PORT:6667 -v $ZNC_DATA:/znc-data --restart=always --name znc $IMAGE
