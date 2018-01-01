@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/env sh
 
 # Options.
 DATADIR="/znc-data"
@@ -36,4 +36,4 @@ chown -R znc:znc "$DATADIR"
 
 # Start ZNC.
 echo "Starting ZNC..."
-exec sudo -u znc znc --foreground --datadir="$DATADIR" $@
+exec su znc -s '/bin/sh' -c "znc --foreground --datadir=\"$DATADIR\" $@"
