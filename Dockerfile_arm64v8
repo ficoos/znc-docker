@@ -1,6 +1,6 @@
-FROM multiarch/alpine:armhf-edge
-LABEL image=ficoos/znc:armhf
-ENV ARCH armhf
+FROM arm64v8/alpine:3.7
+LABEL image=ficoos/znc:arm64v8
+ENV ARCH arm64v8
 MAINTAINER Saggi Mizrahi "saggi@mizrahi.cc"
 
 RUN apk update && \
